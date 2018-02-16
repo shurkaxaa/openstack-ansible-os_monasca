@@ -57,7 +57,6 @@ dependencies:
   - role: ansible-storm
     storm_nimbus_enabled: True
     storm_supervisor_enabled: True
-    nimbus_host: "{{ ansible_ssh_host }}"
     when:
       - inventory_hostname in groups['monasca_api']
     tags:

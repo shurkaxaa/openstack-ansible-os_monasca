@@ -49,7 +49,6 @@ dependencies:
       - zookeeper
       - skip_ansible_lint
   - role: ansible-kafka
-    kafka_listen_address: "{{ ansible_host }}"
     when:
       - inventory_hostname in groups['monasca_kafka']
     tags:

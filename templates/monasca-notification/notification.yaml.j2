@@ -44,7 +44,7 @@ notification_types:
         user: ""
         password: ""
         timeout: 15
-        from_addr: "monasca-notification@{{ ansible_hostname }}"
+        from_addr: "{{monasca_notification_from_addr}}"
 
     webhook:
         timeout: 5

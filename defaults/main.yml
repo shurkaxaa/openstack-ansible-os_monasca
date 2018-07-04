@@ -128,10 +128,18 @@ monasca_service_adminurl: "{{ monasca_service_adminuri }}/v2.0"
 monasca_log_level: INFO
 monasca_user_roles:
   - monasca-user
+
+delegate_authorized_role: monitoring-delegate
 monasca_agent_roles:
   - monasca-agent
+  - "{{delegate_authorized_role}}"
+
 monasca_read_only_user_roles:
   - monasca-read-only-user
+
+monasca_delegate_user_roles:
+  - admin
+  - "{{delegate_authorized_role}}"
 
 monasca_agent_user_name: monasca-agent
 monasca_agent_project_name: admin

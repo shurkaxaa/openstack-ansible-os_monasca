@@ -88,6 +88,7 @@
     - "{{ monasca_user_roles }}"
     - "{{ monasca_agent_roles }}"
     - "{{ monasca_read_only_user_roles }}"
+    - "{{ monasca_delegate_user_roles }}"
 
 # Create an monasca-agent user
 - name: Ensure monasca-agent user

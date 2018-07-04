@@ -36,7 +36,7 @@ read_only_authorized_roles = {{ monasca_read_only_user_roles | join(', ') }}
 
 # The roles that are allowed to access the API on behalf of another tenant.
 # For example, a service can POST metrics to another tenant if they are a member of the "delegate" role.
-delegate_authorized_roles = admin
+delegate_authorized_roles = {{ monasca_delegate_user_roles | join(', ') }}
 
 [messaging]
 # The message queue driver to use
